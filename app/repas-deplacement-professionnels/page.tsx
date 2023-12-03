@@ -1,18 +1,19 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Separator } from "@/components/ui/separator";
-import { SidebarNav } from "./components/sidebar-nav";
-import { ProfileForm } from "./profile-form";
+import { ContentPlace } from "./content-place";
 import { sidebarNavItems } from "@/lib/helpers";
-export default function IndexPage() {
+import { SidebarNav } from "../components/sidebar-nav";
+
+export default function SettingsNotificationsPage() {
   return (
     <div className="container relative">
       <section className="hidden md:block">
         <div className="overflow-hidden rounded-lg border bg-background shadow">
           <div className="hidden space-y-6 p-10 pb-16 md:block">
             <div className="space-y-0.5">
-              <h2 className="text-2xl font-bold tracking-tight text-center">
-                Frais professionnels
-              </h2>
+              <h2 className="text-2xl font-bold tracking-tight">Settings</h2>
+              <p className="text-muted-foreground">
+                Manage your account settings and set e-mail preferences.
+              </p>
             </div>
             <Separator className="my-6" />
             <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
@@ -22,10 +23,12 @@ export default function IndexPage() {
               <div className="flex-1 lg:max-w-2xl">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-medium">Champ d'application</h3>
+                    <h3 className="text-lg font-medium">
+                      Frais de repas lors de déplacements professionnels
+                    </h3>
                   </div>
                   <Separator />
-                  <ProfileForm />
+                  <ContentPlace />
                 </div>
               </div>
             </div>

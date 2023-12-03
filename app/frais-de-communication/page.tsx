@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Separator } from "@/components/ui/separator";
-import { DisplayForm } from "@/app/display/display-form";
+import { ContentPlace } from "./content-place";
 import { sidebarNavItems } from "@/lib/helpers";
 import { SidebarNav } from "../components/sidebar-nav";
 
-export default function SettingsDisplayPage() {
+export default function SettingsNotificationsPage() {
   return (
     <div className="container relative">
       <section className="hidden md:block">
@@ -23,14 +24,12 @@ export default function SettingsDisplayPage() {
               <div className="flex-1 lg:max-w-2xl">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-medium">Display</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Turn items on or off to control what&apos;s displayed in
-                      the app.
-                    </p>
+                    <h3 className="text-lg font-medium">
+                      Frais de communication fixe et mobile & cotisations
+                    </h3>
                   </div>
                   <Separator />
-                  <DisplayForm />
+                  <ContentPlace />
                 </div>
               </div>
             </div>

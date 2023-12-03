@@ -1,9 +1,9 @@
 import { Separator } from "@/components/ui/separator";
-import { AppearanceForm } from "@/app/appearance/appearance-form";
+import { NotificationsForm } from "@/app/frais-deplacement/notifications-form";
 import { sidebarNavItems } from "@/lib/helpers";
 import { SidebarNav } from "../components/sidebar-nav";
 
-export default function SettingsAppearancePage() {
+export default function SettingsNotificationsPage() {
   return (
     <div className="container relative">
       <section className="hidden md:block">
@@ -23,14 +23,12 @@ export default function SettingsAppearancePage() {
               <div className="flex-1 lg:max-w-2xl">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-medium">Appearance</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Customize the appearance of the app. Automatically switch
-                      between day and night themes.
-                    </p>
+                    <h3 className="text-lg font-medium">
+                      Frais de déplacement
+                    </h3>
                   </div>
                   <Separator />
-                  <AppearanceForm />
+                  <NotificationsForm />
                 </div>
               </div>
             </div>

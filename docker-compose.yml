@@ -1,0 +1,59 @@
+# version: "3.8"
+# services:
+#   app:
+#     container_name: nextjs-app
+#     build:
+#       context: . #if your Dockerfile is not at the same level change the path here (./frontend)
+#       target: dev
+#     restart: always
+#     command: npm run dev
+#     environment:
+#       - NODE_ENV=development
+#       - WATCHPACK_POLLING=true
+#     volumes:
+#       - .:/app
+#       - /app/node_modules
+#       - /app/.next
+#     ports:
+#       - 3000:3000
+
+version: "3.8"
+
+services:
+  next-app:
+    container_name: next-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Set environment variables directly in the docker-compose file
+    environment:
+      - WATCHPACK_POLLING=true
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    restart: always
+    ports:
+      - 3000:3000
+
+
+
+
+# version: '3'
+# services:
+#   postgres:
+#     image: postgres:latest
+#     container_name: postgres
+#     ports:
+#       - '6500:5432'
+#     volumes:
+#       - progresDB:/var/lib/postgresql/data
+#     env_file:
+#       - ./.env
+# volumes:
+#   progresDB:
+

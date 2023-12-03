@@ -1,22 +1,42 @@
 export const sidebarNavItems = [
   {
-    title: "Profile",
+    title: "Champ d'application",
     href: "/",
   },
   {
-    title: "Account",
-    href: "/account",
+    title: "Avances sur frais",
+    href: "/avances-sur-frais",
   },
   {
-    title: "Appearance",
-    href: "/appearance",
+    title: "Cartes Corporates",
+    href: "/cartes-corporates",
   },
   {
-    title: "Notifications",
-    href: "/notifications",
+    title: "Frais de déplacement",
+    href: "/frais-deplacement",
   },
   {
-    title: "Display",
-    href: "/display",
+    title: "Frais de repas",
+    href: "/frais-de-repas",
+  },
+  {
+    title: "Frais de repas lors d'un déplacement professionnel",
+    href: "/repas-deplacement-professionnels",
+  },
+  {
+    title: "Frais de repas entre membres du personnel",
+    href: "/repas-membres-personnel",
+  },
+  {
+    title: "Frais d'hébergement",
+    href: "/frais-hebergement",
+  },
+  {
+    title: "Frais de communication fixe et mobiles & cotisations",
+    href: "/frais-de-communication",
+  },
+  {
+    title: "Déplacement en taxi",
+    href: "/taxi",
   },
 ];

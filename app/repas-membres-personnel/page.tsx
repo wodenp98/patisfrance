@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { NotificationsForm } from "@/app/notifications/notifications-form";
+import { ContentPlace } from "./content-place";
 import { sidebarNavItems } from "@/lib/helpers";
 import { SidebarNav } from "../components/sidebar-nav";
 
@@ -23,13 +23,12 @@ export default function SettingsNotificationsPage() {
               <div className="flex-1 lg:max-w-2xl">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-medium">Notifications</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Configure how you receive notifications.
-                    </p>
+                    <h3 className="text-lg font-medium">
+                      Frais de repas entre membres du personnel
+                    </h3>
                   </div>
                   <Separator />
-                  <NotificationsForm />
+                  <ContentPlace />
                 </div>
               </div>
             </div>
