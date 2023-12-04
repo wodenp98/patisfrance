@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function AccountForm() {
   return (
     <div>
@@ -12,6 +14,12 @@ export function AccountForm() {
           supérieur hiérarchique. L’avance est versée au vu de la présentation
           d’un état de frais provisoire accompagné de l’ordre de mission.
         </p>
+        <p className="py-4">
+          Annexe:{" "}
+          <Link href="/pdf/demande-acompte-avance.pdf" className="underline">
+            Demande d’avance/acompte
+          </Link>
+        </p>
       </div>
       <div>
         <h2 className="text-lg font-bold py-8 underline">
@@ -21,6 +29,12 @@ export function AccountForm() {
           Les fonctions impliquant des déplacements fréquents et réguliers
           peuvent bénéficier d’une avance permanente. L’avance permanente ne se
           cumule pas avec la détention d’une carte corporates.
+        </p>
+        <p className="py-4">
+          Annexe:{" "}
+          <Link href="/pdf/demande-avance-permanente.pdf" className="underline">
+            Demande d’avance permanente
+          </Link>
         </p>
       </div>
     </div>
