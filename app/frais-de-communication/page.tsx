@@ -1,40 +1,50 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Separator } from "@/components/ui/separator";
-import { ContentPlace } from "./content-place";
-import { sidebarNavItems } from "@/lib/helpers";
-import { SidebarNav } from "../components/sidebar-nav";
 
 export default function SettingsNotificationsPage() {
   return (
-    <div className="container relative">
-      <section className="hidden md:block">
-        <div className="overflow-hidden rounded-lg border bg-background shadow">
-          <div className="hidden space-y-6 p-10 pb-16 md:block">
-            <div className="space-y-0.5">
-              <h2 className="text-2xl font-bold tracking-tight text-center">
-                Frais professionnels
-              </h2>
-            </div>
-            <Separator className="my-6" />
-            <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-              <aside className="-mx-4 lg:w-1/5">
-                <SidebarNav items={sidebarNavItems} />
-              </aside>
-              <div className="flex-1 lg:max-w-2xl">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium">
-                      Frais de communication fixe et mobile & cotisations
-                    </h3>
-                  </div>
-                  <Separator />
-                  <ContentPlace />
-                </div>
-              </div>
-            </div>
+    <div className="flex-1 lg:max-w-2xl">
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-lg font-medium">
+            Frais de communication fixe et mobile & cotisations
+          </h3>
+        </div>
+        <Separator />
+        <div>
+          <div>
+            <h2 className="text-lg font-bold pb-8 underline">
+              Frais de communication fixe et mobile
+            </h2>
+            <ul className="list-disc pl-5 space-y-8">
+              <li>
+                L’entreprise peut fournir aux membres du personnel un ou
+                plusieurs appareils de communication fixe ou mobile. Ces
+                appareils sont alors à usage strictement professionnel.
+              </li>
+              <li>
+                Etant donné leur coût élevé, les appels passés par G.S.M. à
+                partir de l’étranger ou
+                <span className="underline font-bold ml-1">
+                  vers l’étranger doivent être limités autant que possible.
+                </span>
+              </li>
+            </ul>
+            <p className="my-4">
+              Des applications, type whatsApp, permettent de donner des appels
+              dans certains pays sans surcoût.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold py-8 underline">Cotisations</h2>
+            <p>
+              Les contributions personnelles à des organismes professionnels
+              sont des dépenses privées, à moins que l’intéressé puisse
+              démontrer qu’elles apportent une valeur ajoutée à la société.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

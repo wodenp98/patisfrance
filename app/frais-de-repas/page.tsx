@@ -1,37 +1,85 @@
 import { Separator } from "@/components/ui/separator";
-import { DisplayForm } from "@/app/frais-de-repas/display-form";
-import { sidebarNavItems } from "@/lib/helpers";
-import { SidebarNav } from "../components/sidebar-nav";
 
 export default function SettingsDisplayPage() {
   return (
-    <div className="container relative">
-      <section className="hidden md:block">
-        <div className="overflow-hidden rounded-lg border bg-background shadow">
-          <div className="hidden space-y-6 p-10 pb-16 md:block">
-            <div className="space-y-0.5">
-              <h2 className="text-2xl font-bold tracking-tight text-center">
-                Frais professionnels
-              </h2>
+    <div className="flex-1 lg:max-w-2xl">
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-lg font-medium">Frais de repas</h3>
+        </div>
+        <Separator />
+        <div>
+          <div>
+            <h2 className="text-lg font-bold pb-8 underline">
+              Frais de repas «habituels»
+            </h2>
+            <p>
+              Sont considérés comme frais de repas «habituels» au sens du
+              présent règlement ceux qui correspondent à la prise d’un repas au
+              moins hors du domicile du collaborateur, à l’occasion d’une
+              journée de travail.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold py-8 underline">Barèmes</h2>
+            <div>
+              <p>
+                Les frais de repas du midi dans le cadre de l’organisation
+                habituelle du travail sont alors pris en charge par
+                l’entreprise,comme suit :
+              </p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>
+                  Les salariés de la force de vente (VRP), bénéficient d’une
+                  prise en charge de leur frais de repas journalier au réel à
+                  concurrence de 15,80 € par repas du midi (*).
+                </li>
+                <li>
+                  Les chauffeurs livreurs bénéficient d’une indemnité de repas
+                  par jour travaillé en déplacement hors des locaux de
+                  l’entreprise, au regard des conditions particulières
+                  d’exécution du travail, à hauteur de 9,40 €, Ce mode
+                  d’indemnisation forfaitaire dispense de la production
+                  systématique de factures de restauration, conformément aux
+                  dispositions du BOSS.
+                </li>
+                <li>
+                  Pour les autres collaborateurs de la société, il y a
+                  attribution d’un titre restaurant repas compris dans l’horaire
+                  de travail habituel.
+                </li>
+              </ul>
+
+              <p className="text-sm mt-4">
+                (*) Ces prises en charge sont sous conditions que le salarié ait
+                été contraint d’engager des frais et soit en mesure de produire
+                les justificatifs de ces frais.
+              </p>
             </div>
-            <Separator className="my-6" />
-            <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-              <aside className="-mx-4 lg:w-1/5">
-                <SidebarNav items={sidebarNavItems} />
-              </aside>
-              <div className="flex-1 lg:max-w-2xl">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium">Frais de repas</h3>
-                  </div>
-                  <Separator />
-                  <DisplayForm />
-                </div>
-              </div>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold py-8 underline">
+              Mode d’attribution des titres restaurant
+            </h2>
+            <div>
+              <ul className="list-disc space-y-2">
+                <li>
+                  Le nombre de titres restaurant est calculé chaque mois,
+                  déduction faite du nombre de repas pris en charge par
+                  l’entreprise (réunion, formation, déplacement …) au cours du
+                  mois.
+                </li>
+                <li className="font-bold">
+                  Lors d’un repas mis sur note de frais, il faut alors
+                  <span className="text-red-500 pl-1">
+                    IMPERATIVEMENT LE DEDUIRE DE SMARTRH
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

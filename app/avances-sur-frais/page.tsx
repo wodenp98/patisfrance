@@ -1,37 +1,58 @@
 import { Separator } from "@/components/ui/separator";
-import { AccountForm } from "@/app/avances-sur-frais/account-form";
-import { SidebarNav } from "../components/sidebar-nav";
-import { sidebarNavItems } from "@/lib/helpers";
+import Link from "next/link";
 
 export default function SettingsAccountPage() {
   return (
-    <div className="container relative">
-      <section className="hidden md:block">
-        <div className="overflow-hidden rounded-lg border bg-background shadow">
-          <div className="hidden space-y-6 p-10 pb-16 md:block">
-            <div className="space-y-0.5">
-              <h2 className="text-2xl font-bold tracking-tight text-center">
-                Frais professionnels
-              </h2>
-            </div>
-            <Separator className="my-6" />
-            <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-              <aside className="-mx-4 lg:w-1/5">
-                <SidebarNav items={sidebarNavItems} />
-              </aside>
-              <div className="flex-1 lg:max-w-2xl">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium">Avances sur frais</h3>
-                  </div>
-                  <Separator />
-                  <AccountForm />
-                </div>
-              </div>
-            </div>
+    <div className="flex-1 lg:max-w-2xl">
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-lg font-medium">Avances sur frais</h3>
+        </div>
+        <Separator />
+        <div>
+          <div>
+            <h2 className="text-lg font-bold pb-8 underline">
+              Avance sur frais exceptionnelle
+            </h2>
+            <p>
+              En cas de déplacements exceptionnels, une avance sur le paiement
+              des frais de déplacements temporaires peut être consentie aux
+              collaborateurs qui en font la demande, après autorisation de leur
+              supérieur hiérarchique. L’avance est versée au vu de la
+              présentation d’un état de frais provisoire accompagné de l’ordre
+              de mission.
+            </p>
+            <p className="py-4">
+              Annexe:{" "}
+              <Link
+                href="/pdf/demande-acompte-avance.pdf"
+                className="underline"
+              >
+                Demande d’avance/acompte
+              </Link>
+            </p>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold py-8 underline">
+              Avance sur frais permanente
+            </h2>
+            <p>
+              Les fonctions impliquant des déplacements fréquents et réguliers
+              peuvent bénéficier d’une avance permanente. L’avance permanente ne
+              se cumule pas avec la détention d’une carte corporates.
+            </p>
+            <p className="py-4">
+              Annexe:{" "}
+              <Link
+                href="/pdf/demande-avance-permanente.pdf"
+                className="underline"
+              >
+                Demande d’avance permanente
+              </Link>
+            </p>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

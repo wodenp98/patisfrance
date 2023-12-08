@@ -1,39 +1,42 @@
 import { Separator } from "@/components/ui/separator";
-import { NotificationsForm } from "@/app/frais-deplacement/notifications-form";
-import { sidebarNavItems } from "@/lib/helpers";
-import { SidebarNav } from "../components/sidebar-nav";
 
 export default function SettingsNotificationsPage() {
   return (
-    <div className="container relative">
-      <section className="hidden md:block">
-        <div className="overflow-hidden rounded-lg border bg-background shadow">
-          <div className="hidden space-y-6 p-10 pb-16 md:block">
-            <div className="space-y-0.5">
-              <h2 className="text-2xl font-bold tracking-tight text-center">
-                Frais professionnels
-              </h2>
-            </div>
-            <Separator className="my-6" />
-            <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-              <aside className="-mx-4 lg:w-1/5">
-                <SidebarNav items={sidebarNavItems} />
-              </aside>
-              <div className="flex-1 lg:max-w-2xl">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium">
-                      Frais de déplacement
-                    </h3>
-                  </div>
-                  <Separator />
-                  <NotificationsForm />
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="flex-1 lg:max-w-2xl">
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-lg font-medium">Frais de déplacement</h3>
         </div>
-      </section>
+        <Separator />
+        <div>
+          <p>
+            Un déplacement professionnel est subordonné à une autorisation
+            préalable d’un responsable hiérarchique.
+          </p>
+          <ul className="list-disc pl-5 space-y-8 mt-8">
+            <li>
+              Cette autorisation est:
+              <ul className="list-decimal pl-5 space-y-2">
+                <li>
+                  Implicite, dans le cadre des missions permanentes d’une
+                  fonction, (activité commerciale ou livraison)
+                </li>
+                <li>Spécifique, en cas de missions occasionnelles.</li>
+              </ul>
+            </li>
+            <li>
+              Le déplacement entre le domicile et le lieu de travail n’est pas
+              considéré comme un déplacement professionnel.
+            </li>
+            <li>
+              Cette procédure «frais de déplacement» s’applique exclusivement
+              aux collaborateurs de la société; Il est rigoureusement interdit
+              de souscrire un billet de transport pour le compte d’un tiers
+              extérieur à la société.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

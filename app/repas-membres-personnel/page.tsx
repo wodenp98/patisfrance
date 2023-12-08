@@ -1,39 +1,36 @@
 import { Separator } from "@/components/ui/separator";
-import { ContentPlace } from "./content-place";
-import { sidebarNavItems } from "@/lib/helpers";
-import { SidebarNav } from "../components/sidebar-nav";
 
 export default function SettingsNotificationsPage() {
   return (
-    <div className="container relative">
-      <section className="hidden md:block">
-        <div className="overflow-hidden rounded-lg border bg-background shadow">
-          <div className="hidden space-y-6 p-10 pb-16 md:block">
-            <div className="space-y-0.5">
-              <h2 className="text-2xl font-bold tracking-tight text-center">
-                Frais professionnels
-              </h2>
-            </div>
-            <Separator className="my-6" />
-            <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-              <aside className="-mx-4 lg:w-1/5">
-                <SidebarNav items={sidebarNavItems} />
-              </aside>
-              <div className="flex-1 lg:max-w-2xl">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium">
-                      Frais de repas entre membres du personnel
-                    </h3>
-                  </div>
-                  <Separator />
-                  <ContentPlace />
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="flex-1 lg:max-w-2xl">
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-lg font-medium">
+            Frais de repas entre membres du personnel
+          </h3>
         </div>
-      </section>
+        <Separator />
+        <div>
+          <ul className="list-disc pl-5 space-y-8">
+            <li>
+              L’entreprise ne prend pas en charge les frais de repas pris entre
+              membres du personnel, sauf autorisation expresse exceptionnelle et
+              déplacement professionnel conjoint (*).
+            </li>
+            <li>
+              (*) Lorsque deux collaborateurs se déplacent dans le cadre de
+              leurs activités à plus de 50 Kms de leurs secteurs, les frais de
+              repas de ce déplacement sont pris en charge. C’est alors le
+              collaborateur au niveau hiérarchique le plus haut qui fait la
+              dépense.
+            </li>
+            <li>
+              L’entreprise ne prend pas en charge les boissons pris dans les
+              bars ou autres lieux (hôtels, aéroports, etc.).
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

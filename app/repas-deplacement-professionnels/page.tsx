@@ -1,39 +1,42 @@
 import { Separator } from "@/components/ui/separator";
-import { ContentPlace } from "./content-place";
-import { sidebarNavItems } from "@/lib/helpers";
-import { SidebarNav } from "../components/sidebar-nav";
 
 export default function SettingsNotificationsPage() {
   return (
-    <div className="container relative">
-      <section className="hidden md:block">
-        <div className="overflow-hidden rounded-lg border bg-background shadow">
-          <div className="hidden space-y-6 p-10 pb-16 md:block">
-            <div className="space-y-0.5">
-              <h2 className="text-2xl font-bold tracking-tight text-center">
-                Frais professionnels
-              </h2>
-            </div>
-            <Separator className="my-6" />
-            <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-              <aside className="-mx-4 lg:w-1/5">
-                <SidebarNav items={sidebarNavItems} />
-              </aside>
-              <div className="flex-1 lg:max-w-2xl">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium">
-                      Frais de repas lors de déplacements professionnels
-                    </h3>
-                  </div>
-                  <Separator />
-                  <ContentPlace />
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="flex-1 lg:max-w-2xl">
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-lg font-medium">
+            Frais de repas lors de déplacements professionnels
+          </h3>
         </div>
-      </section>
+        <Separator />
+        <div>
+          <ul className="list-disc pl-5 space-y-8">
+            <li>
+              Est réputé en déplacement professionnel, le salarié empêché de
+              regagner sa résidence ou son lieu habituel de travail pour y
+              prendre son déjeuner.
+            </li>
+            <li>
+              Est réputé en grand déplacement professionnel, le salarié empêché
+              de regagner chaque jour sa résidence habituelle.
+            </li>
+            <li>
+              Les frais de repas du midi
+              <span className="font-bold px-1">
+                encourus à l’occasion d’un déplacement professionnel hors sites
+                Puratos France
+              </span>
+              sont pris en charge par l’entreprise dans la limite de 20 € et sur
+              présentation de justificatifs. Ceux du soir le sont dans la limite
+              de 30 €.
+            </li>
+            <li className="font-bold">
+              L’alcool n’est pas pris en charge par l’entreprise.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
