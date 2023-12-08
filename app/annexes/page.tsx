@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function page() {
   return (
-    <div className="flex-1 lg:max-w-3xl">
+    <div className="flex-1 max-w-full lg:max-w-3xl">
       <div className="space-y-6">
         <div>
           <h3 className="text-lg font-medium">Annexes</h3>
